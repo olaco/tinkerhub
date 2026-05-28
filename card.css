@@ -1,0 +1,60 @@
+ :root {
+            --cosmic-bg: #030008;
+            --neon-blue: #00f2fe;
+            --neon-purple: #9d4edd;
+            --neon-emerald: #00f5d4;
+        }
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--cosmic-bg);
+            background-image: 
+                radial-gradient(circle at 20% 30%, rgba(157, 78, 221, 0.15) 0%, transparent 40%),
+                radial-gradient(circle at 80% 70%, rgba(0, 242, 254, 0.12) 0%, transparent 40%);
+            background-attachment: fixed;
+        }
+        .multiverse-heading {
+            font-family: 'Orbitron', sans-serif;
+            letter-spacing: 0.15em;
+            background: linear-gradient(135deg, #fff 30%, var(--neon-blue) 70%, var(--neon-purple) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        /* Premium 3D Spatial Flip Architecture */
+        .card-container {
+            perspective: 1400px;
+        }
+        .flip-engine {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            transition: transform 0.7s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        /* Hover triggers rotation safely without causing layer clipping or overlapping content text clashes */
+        .card-container:hover .flip-engine,
+        .card-container:focus-within .flip-engine {
+            transform: rotateY(180deg);
+        }
+        .face-front, .face-back {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            border-radius: 12px;
+        }
+        .face-back {
+            transform: rotateY(180deg);
+        }
+
+        /* Ambient Glassmorphism & Cyberpunk Accents */
+        .cosmic-panel {
+            background: rgba(10, 6, 22, 0.75);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+        }
